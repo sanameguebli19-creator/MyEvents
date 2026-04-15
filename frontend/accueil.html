@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEvents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    color:rgb(202, 131, 131);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-style: italic;
+
+  }
+  
+    .hero p {
+        font-size: 1.5rem;
+       color: #474141;
+        margin-bottom: 30px;
+        line-height: 1.5;
+       
+    }
+    .hero span {
+       
+            color:#474141;
+            
+        font-style: italic;
+         
+    }
+    .hero button a{
+       
+        font-size: 1.2rem;
+        color: #fff;
+        text-decoration: none;
+       
+    }
+    .hero button {
+        background-color: rgb(202, 131, 131);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 20px 30px;
+    }
+    .hero button:hover {
+        background-color: rgb(123, 68, 68);
+    }
+    .nos-evenements {
+        text-align: center;
+        padding: 50px 20px;
+        background-image: url('images/sect2.jpg');
+        background-size: contain;
+       
+        width: 100%;
+
+    
+
+
+    }
+    .nos-evenements h1 {
+        font-size: 3rem;
+        color: #474141;
+        margin-bottom: 20px;
+    }
+    .nos-evenements p {
+        font-size: 1.2rem;
+        color: #474141;
+        margin-bottom: 30px;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+    .nos-evenements button a{
+        
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #fff;}
+            .nos-evenements button {
+     background-color: rgb(202, 131, 131);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 20px 30px;
+    }
+        
+    .nos-evenements button:hover {
+        background-color: rgb(123, 68, 68);
+    }
+    .rejoignez-nous {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #ffffff;
+    }
+    .rejoignez-nous h1 {
+        font-size: 2.5rem;
+        color:rgb(202, 131, 131);
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-style: italic;
+    }
+    .rejoignez-nous p {
+        font-size: 1.2rem;
+        color: #474141;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+    .rejoignez-nous .inscription {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    .rejoignez-nous .inscription input {
+        padding: 10px;
+        border: 1px solid #474141;
+        border-radius: 10px;
+        width: 450px;
+        height: 40px;
+        background-color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        color: #474141;
+    }
+    .rejoignez-nous .inscription button {
+        background-color: rgb(202, 131, 131);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1rem;
+    }
+    .rejoignez-nous .inscription button:hover {
+        background-color: rgb(123, 68, 68);
+    }
+    
+</style>
+<body>
+  <nav class="navbar" >
+    <div class="logo">
+      <img src="images/logo.png" alt=""></div>
+       <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+      <div class="nav-links" id="navLinks">
+    <ul>
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+     
+     <li><a href="connexion.html">Connexion</a></li> 
+     <li><a href="notification.html"><img src="images/notification.gif" alt="Notifications"></a></li>
+    </ul>
+    </div>
+</nav>
+<section class="hero">
+    <h1>Partagez avec nous <br>vos moments importants.</h1>
+    <p>Nous donnons vie à vos événements privés et professionnels avec une attention particulière <br> portée à l’excellence et à l’émotion pour que chaque occasion soit inoubliable.<br>
+        <span>votre confiance est le clé de notre succès.</span><br>
+    <button > <a href="evenements.html">créer ton événement</a></button>
+
+</section>
+<section class="nos-evenements">
+    <h1>Nos événements</h1>
+    <p>Découvrez nos événements récents et à venir, <br>où nous avons créé des expériences mémorables pour nos clients. <br></p>
+<button><a href="evenements.html">Voir tous les événements</a></button>
+    </section>
+    <section class="rejoignez-nous">
+        <h1>inscrivez-vous</h1>
+        <p>Rejoignez-nous et soyez le premier informé des dernières nouveautés et offres spéciales.</p>
+        <div class="inscription">
+        <input type="email" placeholder="Entrez votre email">
+        <button>S'inscrire</button> </div>
+    </section>
+        <footer class="footer">
+        <div>
+        <p>© 2024 MyEvents. Tous droits réservés.</p></div>
+        <div>
+         <p>Suivez-nous sur les réseaux sociaux : </p>
+        <a href="https://www.facebook.com/myevents" target="_blank"><img src="images/fb.png" alt="Facebook"></a>  
+        <a href="https://www.twitter.com/myevents" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>  
+        <a href="https://www.instagram.com/myevents" target="_blank"><img src="images/inst.png" alt="Instagram"></a></p> 
+        </div>
+    
+    </footer> 
+    
+
+
+   <script src="script.js"></script>
+   
+
+</body>
+</html>

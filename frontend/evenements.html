@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEvents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+    background-color: #f4e3e3;
+   
+  }
+ 
+  .hero {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+ .hero h1 {
+    font-size: 2.5rem;
+    color:rgb(202, 131, 131);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+    .hero p {
+        font-size: 1.5rem;
+       color: #474141;
+        margin-bottom: 30px;
+        line-height: 1.5;
+         
+    }
+    .hero .input-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .hero .input-group input {
+        padding: 10px;
+        
+        border: 1px solid #474141;
+        border-radius: 10px;
+        width: 450px;
+        height: 40px;
+        background-color: #fff;
+       
+        font-size: 1.5rem;text-align: center;
+        color: #474141;
+    }
+    .hero .input-group button {
+         background-color: rgb(255, 255, 255);
+       
+        border-radius: 10px;      
+          border: 1px solid #474141;
+
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 10px 20px;
+        color: #474141;
+        font-size: 1rem;
+    }
+    .categorie {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+       padding-top: 25px;
+       white-space: nowrap;
+    }
+    .categorie button.active {
+        background-color: rgb(202, 131, 131);
+        color: #fff;
+          
+          border-radius: 10px;
+          cursor: pointer;
+          width: 80px;
+          height: 50px;
+ }
+  
+    
+    .categorie button {
+        background-color: rgb(250, 245, 245);
+        border: 1px solid rgb(202, 131, 131);
+        border-radius: 10px;
+        cursor: pointer;
+       
+        padding: 10px 20px;
+        color:rgb(202, 131, 131);
+          font-size: 1rem;
+        transition: background-color 0.3s ease;
+        width: 150px;
+        height: 50px;
+    }
+    .categorie button:hover {
+        background-color: rgb(202, 131, 131);
+        color: #fff;
+    }
+      .nos-chiffres {
+          display: flex;
+          justify-content: center;
+          gap: 50px;
+          margin-top: 40px;
+      }
+      .nos-chiffres .chiffres {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+    .nos-chiffres h1 {
+        font-size: 2rem;
+        color: rgb(202, 131, 131);
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    .nos-chiffres p {
+        font-size: 1rem;
+        color: #474141;
+        margin-bottom: 30px;
+    }
+    .cards {
+        padding: 50px 20px;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    .cards h2 {
+        font-size: 2rem;
+        color: rgb(202, 131, 131);
+        margin-bottom: 20px;
+        font-weight: 600;
+      
+    }
+    .cards .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       align-items: center;
+        gap: 20px;
+
+    }
+    
+    .evenement-item {
+        background-color: rgb(250, 245, 245);
+        border: 1px solid rgb(202, 131, 131);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        transition: box-shadow 0.3s ease;
+    }
+    .evenement-item:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .cards .card .evenement-item h3{
+         color: rgb(202, 131, 131);
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 1.25rem;
+    }
+    .cards .card .evenement-item p {
+        font-size: 1rem;
+         color: #474141;
+        line-height: 1.5;
+    }
+      .date {
+          font-size: 0.9rem;
+          color: #474141;
+          margin-top: 10px;}
+      .badge {   
+        display: inline-block;
+          background-color: rgb(202, 131, 131);
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+          font-size: 0.8rem;
+          margin-bottom: 10px;
+      }
+       .btn-groupe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;}
+        .btn-groupe .btn-participer {
+      background-color:rgb(250, 245, 245); 
+        border: 1px solid rgb(202, 131, 131);
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: #474141;
+        font-size: 1rem;}
+        .btn-groupe .btn-info {
+      background-color:rgb(250, 245, 245); 
+        border: 1px solid rgb(202, 131, 131);
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: #474141;
+        font-size: 1rem;
+        }
+.details {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(245, 240, 240);
+    border: 1px solid rgb(202, 131, 131);
+    border-radius: 5px;
+    font-size: 0.9rem;
+     color: #474141;
+     line-height: 1.8;
+}
+.details p {  
+    margin: 5px 0;
+}
+.details.open {
+    display: block;}
+    .modal {
+        display: flex;
+         position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+       
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+      align-items: center;}
+    .modal-content {
+      background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        text-align: center;
+        margin-left: 500px;
+        margin-top: 100px;
+       }
+    .modal-content h2 {
+        font-size: 1.5rem;
+        color: rgb(202, 131, 131);
+        margin-bottom: 20px;
+    }
+    .modal-content input {
+        padding: 10px;
+        border: 1px solid #474141;
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+    .modal-content .btn-submit {
+        background-color: rgb(202, 131, 131);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .modal-content.btn-submit:hover {
+        background-color: rgb(123, 68, 68);
+    }
+      .modal-content.success-message{
+        color: #474141;
+        font-weight: 600;
+        text-align: center;
+      }
+
+     .modal.close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        color: #474141;
+        cursor: pointer;
+    }
+    .modal.open {
+        display: block;}
+
+     .Nos-services {
+        padding: 50px 20px;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    .Nos-services h2 {
+        font-size: 2rem;
+        color: rgb(202, 131, 131);
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .Nos-services .services-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .Nos-services .service-item {
+        background-color: rgb(250, 245, 245);
+        border: 1px solid rgb(202, 131, 131);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 300px;
+    }
+    .Nos-services .service-item h3 {
+        color: rgb(202, 131, 131);
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 1.25rem;
+    }
+    .Nos-services .service-item p {
+        font-size: 1rem;
+         color: #474141;
+        line-height: 1.5;
+    }
+    .contact {
+        padding: 50px 20px;
+         text-align: center;
+
+    }
+    .contact h2 {
+        font-size: 2rem;
+        color: rgb(202, 131, 131);
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .contact p {
+        font-size: 1rem;
+        color: #474141;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .contact button {
+        padding: 20px 30px;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        background-color: rgb(202, 131, 131);
+         border-radius: 10px;
+          border: none;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+         width: 250px;
+         height: 50px;
+    }
+    .contact button:hover {
+        background-color: rgb(123, 68, 68);
+    }
+
+
+
+  
+
+
+</style>
+  
+<body>
+   <nav class="navbar" >
+    <div class="logo">
+      <img src="images/logo.png" alt=""></div>
+       <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+      <div class="nav-links" id="navLinks">
+    <ul>
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+      
+      <li><a href="connexion.html">Connexion</a></li> 
+     <li><a href="notification.html"><img src="images/notification.gif" alt="Notifications"></a></li>
+   
+    </ul>
+    </div>
+</nav> 
+<section class="hero">
+<h1>Bienvenue sur MyEvents</h1>
+    <p>Créez, gérez et partagez vos événements en toute simplicité.</p><br>
+
+   <div class="input-group"> 
+  <input type="text" placeholder="Rechercher un événement..." > 
+  <button>Rechercher</button>
+  </div>
+    <div class="categorie">
+    <button class="active">Tous</button>
+    <button >Cette semaine</button>
+    <button>Ce mois</button>
+    <button>Ce trimestre</button>
+     </div>
+</section>
+<section class="nos-chiffres">
+ <div class="chiffres" >
+    <h1>126</h1> 
+    <p>Événements créés</p></div>
+    <div class="chiffres" >
+   <h1>3400</h1>
+    <p>participants</p></div>
+    <div class="chiffres" >
+    <h1>98%</h1>
+    <p>satisfaction</p> </div>
+       
+</section>
+<section class="cards">
+  <h2>Découvrez nos événements à venir</h2>
+<div class="card">
+       
+    <div class="evenement-item">
+        <span class="badge">Places limitées</span>
+        <h3>Festival de Musique</h3>
+        <p>Venez vibrer au rythme de la musique avec des artistes locaux et internationaux.</p>
+     <div class="date">📅 20 avril 2026</div>
+
+     <div class="btn-groupe" > 
+      <button class="btn-participer" onclick="ouvrirModal('Festival de Musique')">Participer</button>
+     <button class="btn-info" onclick="toggleDetails(this)">Plus d'infos ▼</button></div> 
+       
+        <div class="details">
+          <p>📍 Lieu : Parc de la Villette, Paris</p>
+          <p>🕐 Heure : 19h00 - 23h00</p>
+          <p>💰 Prix : Gratuit</p>
+          <p>👥 Places disponibles : 12</p>
+        </div></div>
+       
+      <div class="evenement-item">
+        <span class="badge">Places limitées</span>
+        <h3>concert de rock</h3>
+        <p>Rejoignez-nous pour une soirée de rock en direct avec des groupes locaux et internationaux.</p>
+       <div class="date">📅  2 Mai 2026</div>
+        
+        <div class="btn-groupe" > 
+      <button class="btn-participer" onclick="ouvrirModal('Festival de Musique')">Participer</button>
+     <button class="btn-info" onclick="toggleDetails(this)">Plus d'infos ▼</button>
+    </div>
+
+        <div class="details">
+          <p>📍 Lieu : Zénith de Paris</p>
+          <p>🕐 Heure : 20h00 - 00h00</p>
+          <p>💰 Prix : 15€</p>
+          <p>👥 Places disponibles : 50</p>
+        </div>
+</div> 
+      <div class="evenement-item">
+        <span class="badge">Places limitées</span>
+        <h3>Atelier de Cuisine</h3>
+        <p>Apprenez à cuisiner des plats délicieux avec notre chef renommé.</p>
+       <div class="date">📅 16 juin 2026</div>
+      
+      <div class="btn-groupe" > 
+      <button class="btn-participer" onclick="ouvrirModal('Festival de Musique')">Participer</button>
+     <button class="btn-info" onclick="toggleDetails(this)">Plus d'infos ▼</button>
+    </div> 
+<div class="details">
+          <p>📍 Lieu : Studio Culinaire, Lyon</p>
+          <p>🕰️ Heure : 14h00 - 17h00</p>
+          <p>💰Prix : 25€</p>
+          <p>🧑‍🤝‍🧑 Places disponibles : 20</p>
+        </div>
+      </div>
+    </div>
+ </section>
+ <div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fermerModal()">❌</span>
+        <h2 id="modalTitle">Inscription</h2>
+       <input type="text"  id="nomInput" placeholder="Entrez votre nom">
+        <input type="email" id="emailInput" placeholder="Entrez votre email">
+        <input type="tel" id="telInput" placeholder="Entrez votre numéro de téléphone">
+        <button class="btn-submit" onclick="soumettre()">Confirmer</button> 
+        
+        <div class="success-message" id="successMsg" >✅inscription confirmée!A bientôt.
+ </div> </div></div>
+ 
+<section class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Vous avez des questions ou souhaitez discuter de votre prochain événement ? <br>
+        N'hésitez pas à nous contacter, nous sommes là pour vous aider à créer des moments inoubliables.</p>
+    <button>Contactez-nous</button>
+
+     </section>
+      <section class="Nos-services">
+    <h2>Nos services</h2>
+    <div class="services-list">
+      <div class="service-item">
+        <h3>Planification d'événements</h3>
+        <p>  Nous vous aidons à planifier chaque détail de votre événement pour une expérience sans stress.</p>
+      </div>
+      <div class="service-item">
+        <h3>Gestion des invités</h3>
+        <p>Gérez facilement vos invités avec notre système de gestion d'invités convivial.</p>
+      </div>
+      <div class="service-item">
+        <h3>Promotion d'événements</h3>
+        <p>Nous vous aidons à promouvoir votre événement pour attirer un public plus large.</p>
+      </div>
+    </div>
+  </section>
+      
+
+
+ <footer class="footer">
+        <div>
+        <p>© 2024 MyEvents. Tous droits réservés.</p></div>
+        <div>
+         <p>Suivez-nous sur les réseaux sociaux : </p>
+        <a href="https://www.facebook.com/myevents" target="_blank"><img src="images/fb.png" alt="Facebook"></a>  
+        <a href="https://www.twitter.com/myevents" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>  
+        <a href="https://www.instagram.com/myevents" target="_blank"><img src="images/inst.png" alt="Instagram"></a></p> 
+        </div>
+    
+      </footer>
+      <script src="script.js"> </script>
+    
+
+        
+</body>
+</html>
