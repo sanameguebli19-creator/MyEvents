@@ -3,6 +3,34 @@
     padding: 0;
 font-family: Arial, sans-serif;
   }
+   :root {
+  /* 🎨 Couleurs principales */
+  --primary: #CA8383;        /* rose doux (ta couleur principale actuelle) */
+  --primary-dark: #7B4444;   /* hover / actions */
+  --primary-light: #F4E3E3;  /* fond léger */
+
+  /* 🎨 Couleurs secondaires */
+  --secondary: #FFFFFF;      /* blanc */
+  --background: #FAF5F5;     /* fond global */
+  --card-bg: #F9F4F4;        /* cartes */
+
+  /* 🎨 Texte */
+  --text-main: #474141;      /* texte principal */
+  --text-light: #8A7F7F;     /* texte secondaire */
+
+  /* 🎨 Bordures */
+  --border: #E5CFCF;
+
+  /* 🎨 Feedback */
+  --success: #4CAF50;
+  --error: #E74C3C;
+
+  /* 🎨 Effets */
+  --shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+  /* 🎨 Radius */
+  --radius: 10px;
+}
   
   .navbar {
     display: flex;
