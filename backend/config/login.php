@@ -43,8 +43,8 @@ if ($user && password_verify($password, $user['mot_de_passe'])) {
     // Régénérer l'ID de session pour éviter la fixation de session
     session_regenerate_id(true);
 
-    // Redirection vers l'accueil
-    header('Location: ../../accueil.php');
+    // Redirection vers le tableau de bord
+    header('Location: ../../dashboard.php');
     exit();
 
 } else {

@@ -1,4 +1,13 @@
 <?php
+/**
+ * Gabarit de connexion à la base de données.
+ *
+ * 1. Copie ce fichier en "db.php" dans le même dossier :
+ *      cp backend/config/db.example.php backend/config/db.php
+ * 2. Renseigne tes vrais identifiants (hôte, base, utilisateur, mot de passe)
+ * 3. Ne mets JAMAIS backend/config/db.php dans Git (voir .gitignore)
+ */
+
 $host     = 'localhost';
 $dbname   = 'myevents';
 $username = 'root';

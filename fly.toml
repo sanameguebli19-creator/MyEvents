@@ -1,0 +1,9 @@
+app = "myevents-app"
+primary_region = "cdg"
+
+[build]
+  image = "php:8.2-apache"
+
+[http_service]
+  internal_port = 80
+  force_https = true
