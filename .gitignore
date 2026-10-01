@@ -1,0 +1,6 @@
+# Identifiants de connexion à la base de données (ne jamais publier)
+backend/config/db.php
+
+# Fichiers système
+.DS_Store
+Thumbs.db
